@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Click to sign</h3>
+          <input type="text" id="txt" style="border-radius: 5px;">
+        </div>
+        <div class="col-sm-6">
+          <h3>Click to sign</h3>
+          <input type="text" id="txt2" style="border-radius: 5px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+            var sign = $('#txt').SignaturePad({
+                allowToSign: true,
+                img64: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+                border: '1px solid #c7c8c9',
+                width: '300px',
+                height: '150px',
+                callback: function (data, action) {
+                    console.log(data);
+                }
+            });
+
+            var sign = $('#txt2').SignaturePad({
+                allowToSign: true,
+                img64: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+                border: '1px solid #c7c8c9',
+                width: '300px',
+                height: '150px',
+                callback: function (data, action) {
+                    console.log(data);
+                }
+            });
+
+        })
+</script>
